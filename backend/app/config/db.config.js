@@ -5,7 +5,7 @@ module.exports = {
   USER: "kennyjay",
   PASSWORD: "mysqluser",
   //DB: "lms4_v3_SV", //uses Jenson's schema
-  DB: "LMS5_teams_SV_09926460051720"
+  DB: "lms5_leon_fasrfwafsadfsd",
 };
 
 //MY DATABASE

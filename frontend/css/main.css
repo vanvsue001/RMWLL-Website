@@ -1,150 +1,52 @@
-/* Write your SCSS here for your application
- Install the Live Sass Compiler (Ritwick Dey) V. 3.0.0
- Click on 'Watch Sass' button on toolbar below
- main.scss will get compiled into main.css (don't modify this file yourself)
- */
+body {
+  padding-top: 100px;
+  background-image: url(../images/dota-background.jpg);
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
+
 #logo {
   -webkit-animation-name: animateNavLogo;
-          animation-name: animateNavLogo;
+  animation-name: animateNavLogo;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 
-.navbar {
-  /*background-image: url("pictures/navImg.png");*/
-  /*background-color: black;*/
-  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(14, 0, 0) 67%, rgb(19, 29, 178) 100%);
-}
-
-.nav-content {
-  display: flex;
-  width: 50%;
-}
-
-#navButton1, #navButton2 {
-  color: #131db2;
+#navButton1,
+#navButton2 {
+  color: white;
   -webkit-animation-name: animateNavButton;
-          animation-name: animateNavButton;
+  animation-name: animateNavButton;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 
-#navButton1.active, #navButton2.active {
-  background-color: #131db2;
-  color: white;
-}
-
-#navButton1.active:hover, #navButton2.active:hover {
-  color: #131db2;
-}
-
-#navButton1:hover, #navButton2:hover {
-  background-color: white;
-  color: black;
-  border-color: black;
-}
-
-.league-name {
-  color: white;
-  text-align: end;
-  padding: 20px;
-  width: 50%;
-}
-
-.alert-warning {
-  color: white;
-  background-color: #eece60;
-  border-color: #b28e13;
-}
-
-body {
-  background-color: lightgrey;
-  color: black;
-  padding-top: 90px;
-}
-
-.mainContent, .aside {
-  background-color: white;
-  color: black;
-  border-radius: 15px;
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-  background-image: var(--bs-gradient);
-}
-.listContent {
-  border-radius: 15px;
-}
-
-.btn-primary {
-  background-color: #131db2;
-  color: white;
-  border-color: white;
-}
-
-.btn-primary:active,
-.btn-primary:focus,
-.btn-primary:hover {
-  background-color: white;
-  color: black;
-  border-color: black;
-}
-
-.modal-header {
-  border-bottom: 0 none;
-}
-
-.modal-footer {
-  border-top: 0 none;
-}
-
-.hidden {
-  display: none;
-}
-
-.text-img:hover {
-  color: black;
-  display: block;
-}
-
-.bg-img {
-  background-image: url("../images/laxGoal.jpg");
-  height: auto;
-  opacity: 0.8;
-  color: black;
-}
-
-.rules {
-  background-color: white;
-  color: black;
-}
-
-th[data-name=numPlayers], th[data-name=actions] {
-  text-align: center;
-}
-
-td:nth-child(4), td:nth-child(5) {
-  text-align: center;
-}
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+#navButton1.active,
+#navButton2.active {
   background-color: black;
   color: white;
 }
 
-.bg-blue {
-  background-color: #131db2 !important;
+#navButton1.active:hover,
+#navButton2.active:hover {
+  color: white;
 }
 
-footer {
-  background-image: url("../images/footer_img.png");
+#navButton1:hover,
+#navButton2:hover {
   background-color: black;
-  color: white;
+  color: darkred;
 }
 
 #homeAnimate {
   -webkit-animation-name: animateHomeLogo;
-          animation-name: animateHomeLogo;
+  animation-name: animateHomeLogo;
   -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes animateHomeLogo {
@@ -164,6 +66,7 @@ footer {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes animateNavLogo {
   0% {
     width: 200%;
@@ -176,6 +79,7 @@ footer {
     color: transparent;
   }
 }
+
 @keyframes animateNavLogo {
   0% {
     width: 200%;
@@ -188,6 +92,7 @@ footer {
     color: transparent;
   }
 }
+
 @-webkit-keyframes animateNavButton {
   0% {
     visibility: hidden;
@@ -196,6 +101,7 @@ footer {
     visibility: hidden;
   }
 }
+
 @keyframes animateNavButton {
   0% {
     visibility: hidden;
@@ -204,20 +110,12 @@ footer {
     visibility: hidden;
   }
 }
-/*max width go bigger to smaller*/
-@media only screen and (max-width: 1700px) {
-  .top-footer-icon {
-    text-align: end;
-  }
+
+tr {
+  color: #26a3d1;
 }
-@media only screen and (max-width: 1200px) {
-  .center-col {
-    justify-content: center;
-  }
-  footer {
-    text-align: center;
-  }
-  .top-footer-icon {
-    text-align: center;
-  }
-}/*# sourceMappingURL=main.css.map */
+
+tr:hover {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

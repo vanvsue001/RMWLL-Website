@@ -9,7 +9,7 @@ var teamViewModel = {
     deleteModalContainerId: "deleteModal",
     editModalContainerId: "editModal",
     alertContainerId: "alertContainer",
-    wrapperContainerId: "app_container",//"teamPageWrapper",
+    wrapperContainerId: "app_container", //"teamPageWrapper",
     wrapperTemplateUrl: "js/views/partials/list_view_wrapper.ejs",
     templateUrl: "js/views/partials/list_view.ejs",
     containerId: "tableContainer",
@@ -26,7 +26,7 @@ var teamViewModel = {
       filterCol: "",
       filterStr: "",
     },
-    listTitle: "RMWLL Teams",
+    listTitle: "Dota Teams",
 
     id: "my-list",
     tableClasses: "table table-dark table-hover mt-2", //classes for table tag
@@ -55,7 +55,7 @@ var teamViewModel = {
         label: "Motto",
         name: "motto",
         popover: "true",
-      }
+      },
     ],
   },
   form: {
@@ -129,8 +129,7 @@ var teamViewModel = {
           type: "text",
           placeholder: "notes",
           //pattern will allow you to customize your validation.
-          pattern:
-            ".*",
+          pattern: ".*",
           //use the title tag to explain the format required
           title: "Phone Number (Format: +1 (999)999-9999)",
           class: "form-control",
@@ -154,7 +153,7 @@ var teamViewModel = {
           required: true,
           requiredMessage: "Motto is required",
         },
-      }
+      },
     ],
   },
 };
