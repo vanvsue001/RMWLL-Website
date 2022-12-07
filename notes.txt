@@ -1,0 +1,2 @@
+how to trigger loadView in router
+how to render home page in router .. appController again? loop?

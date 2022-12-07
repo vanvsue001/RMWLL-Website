@@ -1,0 +1,38 @@
+<div class="table-responsive">
+  <table id="<%=viewModel.id%>" class="<%=viewModel.tableClasses%>">
+    <tr class="trow">
+      <% view.columns.forEach( function(col, key){ %>
+
+      <th class="thead sortable <%=viewModel.thClasses%>" data-name="<%=col.name%>"> <%=col.label%>
+        <i id="<%=col.name%>-asc" class="fa fa-arrow-up" aria-hidden="true" style="display: none"></i>
+        <i id="<%=col.name%>-desc" class="fa fa-arrow-down" aria-hidden="true" style="display: none"></i>
+      </th>
+      <% }) %>
+      <th class="thead <%=viewModel.thClasses%>">Actions</th>
+    </tr>
+
+    <%  view.data.forEach( function(value, keyy){ %>
+      <tr class="trow">
+      <% view.columns.forEach( function(col, key){ %>
+          <td data-name="<%=value.name%>" data-id="<%=value.id%>" data-bs-toggle="popover"> <%=value[col.name]%>  
+      <% }) %>
+        <td>
+          <div class="row text-center">
+            <div class="px-1 pb-1 col">
+
+              <button type="button" class="btn btn-secondary">
+                <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editModal" data-id="<%=value.id%>"></i>
+                </button>
+            </div>
+            <div class="px-1 col">
+              <button type="button" class="btn btn-secondary">
+              <span class="fa-solid fa-trash" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="<%=value.id%>" data-name="<%=value.name%>"> </span>
+              </button>
+            </div>
+        </div>
+        </td>
+        </tr>
+    <% }) %>
+
+  </table>
+</div>

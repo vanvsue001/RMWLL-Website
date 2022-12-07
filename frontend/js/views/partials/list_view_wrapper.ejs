@@ -1,0 +1,97 @@
+         <!--Team Page Content-->
+         <!--<div id="teamPage" class="tab-pane col-12">-->
+          <div class="container-fluid">
+            <div class="row g-3 py-3">
+              <!--ASIDE SCHEDULE COL-->
+              <div class="col-xl-3 col-md-12">
+                  <div class="aside p-3">
+                      <h4>Schedule</h4>
+                      
+                      <hr>
+                      <p>Bosie vs Air Force</p>
+                      <p>September 17th 2022</p>
+                      <p>@10:00 am || 1400 Bronco Ln, Boise, ID 83706</p>
+                      <hr>
+                      <p>Denver vs Northern Colorado</p>
+                      <p>September 17th 2022</p>
+                      <p>@6:00 pm || 2201 East Asbury Avenue Denver</p>
+                      <hr>
+                      <p>Utah Valley vs Wyoming</p>
+                      <p>October 1st 2022</p>
+                      <p>@7:00pm || N Vineyard Rd, Vineyard, UT 84058</p>
+                      <hr>
+                  </div>
+              </div>
+
+              <!--TABLE WRAPPER/ TABLE COL-->
+              <div class="col-xl-9 col-md-12">
+                <div class="listContent shadow-lg bg-black bg-opacity-75 bg-gradient p-3">
+                  <div class="row">
+                    <!--TABLE WRAPPER-->
+                    
+                        <h1 class="w-50 text-white"> <%=viewModel.listTitle%> </h1>
+                        <div class="d-flex m-2 w-50 justify-content-end">
+                        <button id="addBtn" class="btn btn-primary d-grid pt-2" ><i class="fa-solid fa-plus" data-bs-toggle="modal" data-bs-target="#editModal"></i></button>
+                          <input id="searchInput" class="ms-3 me-3 w-100" placeholder="Search...">
+                          <button id="clearSearch" class="btn btn-primary">Clear</button>
+                        </div>
+                      <!--TABLE-->
+                      <div class="table-responsive-md">
+                        <div id="<%=viewModel.alertContainerId%>" class="mt-2"></div>
+                        <div id="tableContainer" class="mt-2">
+                        </div>
+                        <button id="resetView" class="btn btn-primary clear-search-btn ml-2">Reset View</button>
+                      </div>
+                  </div>
+                </div>
+            </div> <!--col-9-->
+          </div>
+        </div>
+    <div class="modal" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="modal-trash-title">Delete Item?</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            This action cannot be undone!
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+            <button id="yesButton" type="button" class="btn btn-primary" data-bs-dismiss="modal">Yes</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Modal-->
+  <div class="modal" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body" id="formContainer">
+          
+        </div>
+
+       
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
