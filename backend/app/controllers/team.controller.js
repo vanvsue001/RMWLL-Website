@@ -92,6 +92,8 @@ exports.listAll = (req, res) => {
           err.message || "Some error occurred while retrieving teams.",
       });
     else res.send(data);
+    console.log("------------------")
+    console.log(req.query.sortCol, req.query.sortDir);
   });
 };
 

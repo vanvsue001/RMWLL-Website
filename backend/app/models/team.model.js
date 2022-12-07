@@ -71,7 +71,8 @@ Team.getById = (id, result) => {
 
 Team.listAll = (sortCol, sortDir, filterCol, filterStr, limit, offset, result) => {
   //SELECT teams.id, teams.name, (concat(people.first_name, ' ', people.last_name)) as full_name, people.email, people.phone, teams.num_players FROM teams INNER JOIN people ON people.id = teams.coach_id 
-  let queryString = "SELECT * FROM teams"
+  //let queryString = "SELECT * FROM teams"
+  let queryString = `SELECT teams.id, teams.name, teams.notes, teams.motto, (concat(people.first_name, ' ', people.last_name)) as coachName FROM teams INNER JOIN people ON people.id = teams.coach_id`
 
   if(limit && offset){
     //SORTING
@@ -83,14 +84,7 @@ Team.listAll = (sortCol, sortDir, filterCol, filterStr, limit, offset, result) =
   }
   if(sortCol && sortDir){
     //SORTING
-    queryString += ` ORDER BY ${sortCol}`
-    if (sortDir = "dsc"){
-      queryString += ` DESC`
-    }
-    else{
-      queryString += ` ASC`
-    }
-    
+    queryString += ` ORDER BY ${sortCol} ${sortDir}`
   }
 
   //execute sql query
